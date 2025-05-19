@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obračun članarine - Social Fit-Int</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="h4 mb-0 text-center">Obračun članarine u teretani</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="meseci" class="form-label">Broj meseci:</label>
+                            <input type="number" class="form-control" id="meseci" min="1" value="5">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="cena" class="form-label">Cena mesečne članarine (din):</label>
+                            <input type="number" class="form-control" id="cena" min="0" value="2000">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="preporuke" class="form-label">Broj vežbača koje ste doveli:</label>
+                            <input type="number" class="form-control" id="preporuke" min="0" value="3">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="clanstvo" class="form-label">Broj meseci članstva:</label>
+                            <input type="number" class="form-control" id="clanstvo" min="0" value="48">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="treninzi" class="form-label">Broj treninga u ovom mesecu:</label>
+                            <input type="number" class="form-control" id="treninzi" min="0" value="23">
+                        </div>
+                        
+                        <button id="izracunajBtn" class="btn btn-primary w-100 py-2">Izračunaj</button>
+                    </div>
+                </div>
+
+                <div id="rezultat" class="card shadow mt-4 d-none">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="h5 mb-0">Rezultati:</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <p>Ukupna cena pre popusta: <strong><span id="ukupnaCena"></span> din.</strong></p>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <p>Ukupan popust: <strong><span id="ukupanPopust"></span>%</strong></p>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="alert alert-success">
+                                    Konačna cena: <strong><span id="konacnaCena"></span> din.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <h4 class="h6 text-muted">Detalji popusta:</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item" id="popustPreporuka"></li>
+                                <li class="list-group-item" id="popustLojalnost"></li>
+                                <li class="list-group-item" id="popustAktivnost"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="skripta.js"></script>
+</body>
+</html>

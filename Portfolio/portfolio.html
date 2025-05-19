@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moj Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="pozadinski-video.mp4" type="video/mp4" />
+        Vaš browser ne podržava video.
+      </video>
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>Dobrodošli u moj portfolio</h1>
+        <nav>
+          <ul>
+            <li><a href="#o-meni">O meni</a></li>
+            <li><a href="#radovi">Radovi</a></li>
+            <li><a href="#vestine">Veštine</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+          <button id="darkModeToggle">🌙</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="o-meni">
+    <h2>O meni</h2>
+    <div class="o-meni-sadrzaj">
+      <img src="moja-slika.jpg" alt="Moja slika" />
+      <p>
+        Zdravo moje ime je Đorđe Nikolić, rođen sam 28. Avgusta 2006. godine u Ćupriji. Od malena sam voleo da se igram na kompjuteru i eksperimentišem sa raznim stvarima i konačno sam našao mesto gde mogu da radim oba u isto vreme. 
+      </p>
+    </div>
+  </section>
+
+  <section id="radovi">
+    <h2>Radovi</h2>
+    <div class="buttons">
+      <a class="button" href="pismeni.html" target="_blank">GameFreak</a>
+      <a class="button" href="teretana.html" target="_blank">Teretana</a>
+      <a class="button" href="poker-duel.html" target="_blank">Poker</a>
+      <a class="button" href="prvi_projekat.html" target="_blank">Prvi Projekat</a>
+    </div>
+  </section>
+
+ <!-- SEKCIJA VEŠTINE -->
+<!-- Font Awesome ikone -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<section id="vestine">
+  <h2>Veštine</h2>
+  <div class="vestine-lista">
+    <div class="vestina"><i class="fab fa-html5"></i> HTML</div>
+    <div class="vestina"><i class="fab fa-css3-alt"></i> CSS</div>
+    <div class="vestina"><i class="fab fa-js-square"></i> JavaScript</div>
+    <div class="vestina"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+    <div class="vestina"><i class="fas fa-code"></i> C#</div>
+    <div class="vestina"><i class="fas fa-database"></i> SQL</div>
+    <div class="vestina"><i class="fas fa-database"></i> MySQL</div>
+  </div>
+</section>
+
+
+
+
+
+  <section id="kontakt">
+  <h2>Kontakt</h2>
+  <div class="kontakt-info">
+    <p><i class="fas fa-envelope"></i> Email: djolenikoli24@gmail.com</p>
+    <p><i class="fas fa-phone-alt"></i> Telefon: +381 62 89 69 119</p>
+    <p><i class="fab fa-instagram"></i> Instagram: 
+      <a href="https://instagram.com/aram1is" target="_blank">@Đorđe Nikolić</a>
+    </p>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Djordje Nikolic. Sva prava zadržana.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("darkModeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>

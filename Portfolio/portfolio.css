@@ -1,0 +1,358 @@
+/* Reset i osnovni stilovi */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+header {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  filter: brightness(0.5);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0c040;
+}
+
+#darkModeToggle {
+  background: none;
+  border: 1.5px solid #fff;
+  color: #fff;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #f0c040;
+  color: #333;
+}
+
+/* Sekcije */
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.o-meni-sadrzaj {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#o-meni img {
+  width: 220px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Radovi */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  width: 180px;
+  user-select: none;
+}
+
+.button:hover {
+  background-color: #555;
+  transform: translateY(-4px);
+}
+
+/* Veštine */
+.skills {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill p {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 12px;
+  transition: width 1s ease-in-out;
+}
+
+.html {
+  width: 90%;
+  background-color: #e44d26;
+}
+
+.css {
+  width: 85%;
+  background-color: #264de4;
+}
+
+.js {
+  width: 75%;
+  background-color: #f0db4f;
+}
+
+.react {
+  width: 65%;
+  background-color: #61dafb;
+}
+
+/* Kontakt */
+#kontakt p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-icons a {
+  color: #333;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #f0c040;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Tamni mod */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header .header-content h1,
+.dark-mode nav ul li a,
+.dark-mode #darkModeToggle {
+  color: #e0e0e0;
+}
+
+.dark-mode nav ul li a:hover,
+.dark-mode #darkModeToggle:hover {
+  color: #ffcc00;
+}
+
+.dark-mode #kontakt p,
+.dark-mode footer {
+  color: #ccc;
+}
+
+.dark-mode .button {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .button:hover {
+  background-color: #666;
+}
+
+.dark-mode .contact-icons a {
+  color: #e0e0e0;
+}
+
+.dark-mode .contact-icons a:hover {
+  color: #ffcc00;
+}
+
+.dark-mode .progress-bar {
+  background-color: #333;
+}
+
+.dark-mode .progress {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .o-meni-sadrzaj {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 90%;
+    max-width: none;
+  }
+
+  .skills {
+    width: 90%;
+  }
+ #vestine {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.vestine-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.vestina {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.vestina i {
+  font-size: 16px;
+  color: #f0c040;
+}
+
+.vestina:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.dark-mode .vestina {
+  background-color: #444;
+}
+
+.dark-mode .vestina:hover {
+  background-color: #666;
+}
+}

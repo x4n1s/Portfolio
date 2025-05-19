@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Shop</title>
+    <link rel="stylesheet" href="styles123.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="home" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="pozadinskivideo2.mp4" type="video/mp4">
+                <!-- Optional fallback content if video doesn't load -->
+                <p>Your browser does not support the video tag.</p>
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Dobrodošli u Game Freak!</h1>
+            <p>Vaša destinacija za gejming!</p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navBar">
+        <a href="#home" class="navLink">Home</a>
+        <a href="#gameCategory" class="navLink">Game Category</a>
+        <a href="#oNama" class="navLink">O nama</a>
+        <a href="#kontakt" class="navLink">Kontakt</a>
+    </nav>
+
+    <!-- GAME CATEGORY SECTION -->
+    <div id="gameCategory" class="gameCategory">
+        <div class="card">
+            <i class="fas fa-desktop"></i>
+            <h2>PC</h2>
+        </div>
+        <div class="card">
+            <i class="fas fa-gamepad"></i>
+            <h2>PS</h2>
+        </div>
+        <div class="card">
+            <i class="fab fa-xbox"></i>
+            <h2>Xbox</h2>
+        </div>
+    </div>
+
+    <!-- ABOUT US SECTION -->
+    <div id="oNama" class="oNama">
+        <h1>O Nama</h1>
+        <p>
+            Dobrodošli u <strong>Game Freak</strong> - vašu ultimativnu destinaciju za sve što je vezano za video igre! 
+            Naša misija je da obezbedimo vrhunsko iskustvo za sve gejmere, bilo da ste ljubitelji <strong>PC</strong>, 
+            <strong>PlayStation</strong> ili <strong>Xbox</strong> platformi.
+        </p>
+        <p>
+            U našoj ponudi možete pronaći najnovije igre, konzole, dodatke i ekskluzivne popuste. 
+            Strast prema gejmingu je ono što nas pokreće, i zato stalno unapređujemo našu ponudu kako bismo 
+            zadovoljili i najzahtevnije igrače.
+        </p>
+        <p class="citat">
+            <em>“Igra nije samo zabava, igra je način života.”</em> - Vaš Game Freak tim 🎮
+        </p>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div id="kontakt" class="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <form>
+            <label for="name">Ime:</label>
+            <input type="text" id="name" placeholder="Vaše ime" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Vaš email" required>
+            <label for="message">Poruka:</label>
+            <textarea id="message" placeholder="Vaša poruka" rows="4" required></textarea>
+            <button type="submit">Pošalji</button>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2024 Game Haven. Sva prava zadržana.</p>
+    </footer>
+</body>
+</html>
